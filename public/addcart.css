@@ -1,0 +1,29 @@
+*{box-sizing: border-box;}
+body{margin:0%;padding:0%;background-size: cover;background-position:center;background-attachment: fixed;background: url("../image/addcartbackgs.png");
+display: flex;justify-content: center;background-repeat: no-repeat;}
+  .closebtn{width:4%;padding:8px;}
+  .clfrm{margin-bottom:300px;}
+  .deleform{position: absolute;right: 10%;top:0%;background-color: orange;display: flex;align-items: center;height:100%;}
+  .email-itemsend{position:relative;z-index:4;width:380px;display: flex;justify-content: center;align-items: center;height: 100vh;
+  position:fixed;}
+  .add-circle:hover{cursor: pointer;}
+  .li-image{width:20px;border:0.6px solid black;background-color: white;padding:10px;border-radius: 100px;position: absolute;top:20%;}
+  .delebtn{height:9px;outline: none;border: none;width:20px;background-color: red;position: absolute;font-size:0px;border-radius: 10px;}
+  .delebtn:hover{cursor: pointer;}
+    .cartlist{width:100%;position: absolute;overflow-y: scroll;height:200px;border:1.4px solid black;top:40%;border-radius:10px;
+      background-color: white;}
+    ul{list-style-type: none;margin-left:-10%;}
+    li{background-color:#f4f4f5;position: relative;
+      font-family:"Reddit Mono", monospace;font-size:11px;margin-top:10px;padding:10px;border:1px solid #aaaaaa;border-radius:10px;}
+    .emailem::placeholder{font-size:11px;}
+      .emailtext::placeholder{font-size:11px;}
+    .emailem{width:100%;margin-bottom:40px;padding:10px;border-radius:10px;border:0.5px solid black;outline:none;}
+    .emailtext{width:100%;margin-bottom:200px;padding:10px;border-radius:10px;border:0.5px solid black;outline:none; }
+    .emaailposi{width:100%;display:flex;justify-content: center;height:25px;left:0%;position: absolute;bottom:0px;}
+    .btnemail{width:70px;border-radius:7px;border:1px solid black;}
+    .btnemail:hover{cursor: pointer;}
+    .adjusposi{width:100%;position: relative;padding-bottom:100px;margin-top:60px;}
+
+@media screen and (max-width:417px) {
+  .email-itemsend{width:90%;}
+}

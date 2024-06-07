@@ -1,0 +1,82 @@
+body{margin:0%;padding:0%;width:100%;background-size: cover;background-repeat: no-repeat;background-image: url("../image/proddescback.png");
+background-position: center;position:relative;}
+body::-webkit-scrollbar{
+  background-color: transparent;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #D6FF95;
+  border-radius: 10px;
+}
+i{font-size:30px;}
+.backposi{display: inline;margin-top:10px;margin-left:10px;position: absolute;display: flex;justify-content: center;align-items: center;}
+.backforms{position:relative;}
+.butnback{position: absolute;z-index:1;background-color:transparent;border:none;}
+.butnback:hover{cursor:pointer;}
+span{margin-left:30px;margin-top:7px;position: absolute;}
+article{background-color:yellow;height:100vh;width:50%;position: relative;}
+.product-stand{display: flex;justify-content: center;background-color:rgba(74,74,31,0.2);width:300px;height:50%;margin-left:50px;position:absolute;bottom:0;border-radius:40px 40px 0 0;
+box-shadow:0 0 10px rgb(0,0,0,0.14);}
+.descc-item{background-image:linear-gradient(to bottom,rgba(186, 186, 186,0.18),rgba(206, 206, 206, 0.15));position:relative;width:500px;border-radius:70px 0 0 70px;
+padding:60px 20px 60px;}
+aside{align-items: center;display:flex;width:100%;height:100vh;justify-content: flex-end;}
+.checkk{margin-left:6px;}
+input[type="number"]{width:20px;height:9px;outline:none;}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.checkbox-possi{display: flex;}
+.color-tube{background-color: blue;width:100%;display: flex;justify-content: center;}
+h1{margin-left:10px;font-family: "Roboto", sans-serif;
+  font-weight: 400;font-style:normal;font-size:25px;}
+  .color-btn:hover{cursor: pointer;}
+  .desc-back{position:absolute;top:60px;left:30px;color:#c4c4c4;font-family: "Raleway", sans-serif;font-weight: bold;font-size:50px;}
+p{margin-left:10px;line-height: 30px; font-family: "Raleway", sans-serif;font-weight: 200;font-style:normal;font-size:12.6px;width:470px;}
+.subhead{margin-left:10px;font-family: "Roboto", sans-serif;font-weight: 400;color:darkgrey;font-style:normal;font-size:13px;}
+.qtyBox{padding:3px;width:80px;background-color:rgba(74,74,31,0.12);border-radius:5px;display:flex;justify-content: center;align-items: center;}
+select{font-family: "Raleway", sans-serif;padding:4px;outline:none;border:none;background-color:rgba(74,74,31,0.12);border-radius:5px;margin-left:50px;}
+.mainbox-layout{position:relative;  justify-content: center;display: flex;margin-top:100px;width: 100%;}
+.boxx-size{top:30px;position:relative;justify-content: center;display: flex;}
+.QTY{font-family: "Raleway", sans-serif;font-size:11px;}
+.btn-forrm{background-color:rgba(233,97,48,0.6);outline:none;border:none;color:white;width:120px;border-radius:6px;padding:8px;}
+.color-list{overflow: scroll;width:10px;position:absolute;padding:80px 10px;height:10px;background-color:white;border:0.5px solid black;border-radius:9px;margin-right:100px;}
+.color-list::-webkit-scrollbar{display:none;}
+.color-list button{width:10px;position: absolute;font-size:0px;padding:10px;border:none;border-radius:100%;}
+.color-list-posi{width:100%;height:100vh;position: absolute;display: flex;justify-content: center;align-items:center;}
+.color-list-contr{margin-top:-10px;}
+.image-size{position: relative;height:200px;margin:-100px;display: flex;justify-content: center;}
+
+@media screen and (max-width:1000px){
+.product-stand{top:10px;width:400px;display: flex;align-items: center;height:270px;margin:90px 0px 0px;border-radius:0 40px 40px 0;}
+.descc-item{position:relative;border-radius:70px 70px 0 0px;}
+.color-list{height:0px;}
+aside{width:100%;align-items: flex-end;justify-content: center;}
+}
+@media screen and (max-height:1204px) and (max-width:1000px){
+  aside{height:1204px;}
+  .descc-item{margin-top:50px;}
+  .color-list-posi{height:1204px;}
+  .back-layo{margin-top:20px;top:0%;}
+}
+
+@media screen and (max-height:598px) and (min-width:1000px){
+  .back-layo{margin-top:20px;top:0%;}
+}
+
+@media screen and (max-width:613px){
+  .desc-back{font-size:27px;left:0%;}
+}
+
+@media screen and (max-width:770px){
+  .descc-item{position:relative;}
+.product-stand{width:300px;}
+}
+@media screen and (max-width:375px){
+.descc-item{height:400px;}
+.mainbox-layout{margin-top:50px;}
+}
+@media screen and (max-width:522px){
+  .para-poss{width:100%;}
+  p{width:100%;}
+}

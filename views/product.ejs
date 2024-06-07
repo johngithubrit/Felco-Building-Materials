@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="product.css" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Petrona:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Kanit:ital,wght@0,700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="parent-header">
+    <nav>
+      <div class="logo">
+      </div>
+      <div class="ul">
+        <div class="home-back">
+          <img id="homepagee" src="../image/homeicon.png" alt="home-icon">
+          <div class="homeclass">
+            <form class="homebtn" action="/prodredirect" method="post">
+              <button type="submit" class="ibtn">HOME</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div style="position:absolute;left:3%;top:20%;font-size:30px;">Visit Our Shop <br>For More..</div>
+    <div class="searchbar-posi">
+      <form class="searform" action="/" method="post">
+        <input class="seartext" type="text" placeholder="Search for products" name="textwritten" value="">
+        <div class="circle">
+          <button class="circle-bttn"><i class="fa fa-search" aria-hidden="true" style="font-size:20px;"></i></button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <input type="hidden" name="" value="<%=itemsearch %>">
+
+<% if(itemadd != "") { %>
+  <form class="" action="/adit" method="post">
+      <button type="submit" class="add-circle">
+        <h5>1</h5>
+      </button>
+  </form>
+<% }else{ %>
+<% } %>
+   <% var j=0; var h = 0;var i = -1; var l=0; var k=0;%>
+   <% const arraymid = [0,8,12,19,24,29,38,44,48,55,60,66,69,73,76]; %>
+    <% const rangest = [1,9,13,20,25,30,35,45,49,56,61,67,71]; %>
+    <% const rangend = [8,12,19,24,29,38,44,48,55,60,66,69,73,76]; %>
+    <% const rangeindex = [1,2,3,4,5,6,7,8,9,10,11,12,13]; %>
+   <% var firstCharacter = 0; %>
+   <% var firstCharacters = 0; %>
+
+     <% var o = 1; %>
+   <% if(itemsearch === ""){ %>
+   <% for(j; j <= 89;j++){ %>
+         <% if(j===0 || j===10 || j===15 || j===23 || j===29 || j===35 || j===45 || j===52 || j===57 || j===65 || j===71 || j===78 || j===82 || j===87  ){ %>
+           <% k++ %>
+           <% if(i===-1){ %>
+             <% i++ %>
+             <% } %>
+
+ <div class="center-product">
+               <div class="title-subhd"><%= itemhead[o] %></div>
+                 </div>
+               <div class="productlist-section" style="margin-top: 50px;">
+                 <input type="hidden" name="innerdescpros" value="<%= putname[k] %>">
+                 <% h++ %>
+                 <% o++ %>
+           <%}else{ %>
+<% for(i; i <= arraymid[h]; i++){ %>
+<div class="product-box">
+               <div class="svg-box">
+                 <div class="img-card">
+                   <img src="<%=itempict[l]%>" style="width: 70%; position: absolute;" alt="">
+                 </div>
+                 <div  style="font-family: 'Roboto', sans-serif;font-weight:700;letter-spacing: 1px;color:#6b6b6b;
+                 font-size:14px; position: absolute; bottom: 20%;"><%= itemtext[i] %></div>
+                 <form class="searform" action="/prodesc" method="post">
+                   <input  type="hidden" name="innerHtml" value="<%= itemtext[i] %>">
+                   <input  type="hidden" name="innercatHtml" value="<%= itemhead[h] %>">
+                   <input type="hidden" name="innerimagepros" value="<%=itempict[l]%>">
+                   <input type="hidden" name="innerdescpros" value="<%= itemofdesc[i]%>">
+                 <button class="go" type="submit">VIEW <i class="fa-solid fa-arrow-right"></i></button>
+                 </form>
+               </div>
+           </div>
+           <% l++ %>
+ <% } %>
+</div>
+  <% } %>
+    <% } %>
+    <% }else if(itemsearch !== ""){ %>
+      <% const headcheck = []; %>
+      <% var nextline = 1 %>
+   <% for(k; k <= itemtext.length;k++){ %>
+       <% for(var p = 0;p <= 14;p++){ %>
+     <% if (itemtext[k] !== undefined) { %>
+  <% var firstCharacter = itemtext[k].substring(0, itemsearch.length); %>
+  <%  var itemsearchsplit = itemsearch.charAt(0).toUpperCase() + itemsearch.slice(1); %>
+  <% } %>
+         <% if(itemsearchsplit === firstCharacter){ %>
+           <% if(itemtext.indexOf(itemtext[k]) >= rangest[p] && itemtext.indexOf(itemtext[k]) <= rangend[p]){ %>
+           <% var nextline = itemtext.indexOf(itemtext[k]); %>
+           <% nextline = rangend[p] %>
+<div class="center-product">
+<div class="title-subhd"><%=itemhead[rangeindex[p]] %></div>
+                <div class="productlist-section" style="margin-top: 50px;">
+                  <% headcheck.push(itemhead[rangeindex[p]]); %>
+                <% } %>
+
+                 <% if(itemsearchsplit === firstCharacter){ %>
+                   <% l = 0 %>
+                              <% for(i;i<=nextline;i++){ %>
+                                <% if (itemtext[i] !== undefined ) { %>
+                              <% var firstCharacters = itemtext[i].substring(0,itemsearch.length) %>
+                              <% } %>
+                           <% if(itemsearchsplit === firstCharacters){ %>
+                             <% var imageindex = itemtext.indexOf(itemtext[i]); %>
+                             <div class="product-box">
+                                            <div class="svg-box">
+                                              <div class="img-card">
+                                                <img src="<%=itempict[imageindex]%>" style="width: 70%; position: absolute;" alt="">
+                                              </div>
+                                              <div style="font-family: 'Roboto', sans-serif;font-weight:700;letter-spacing: 1px;color:#474747;font-size:14px; position: absolute; bottom: 16%;">
+                                                <%= itemtext[i] %></div>
+                                              <form class="searform" action="/prodesc" method="post">
+                                                <input  type="hidden" name="innerHtml" value="<%= itemtext[i] %>">
+                                                <input  type="hidden" name="innercatHtml" value="<%= itemhead[rangeindex[p]] %>">
+                                                <input type="hidden" name="innerdescpros" value="<%= itemofdesc[i]%>">
+                                                <input type="hidden" name="innerimagepros" value="<%=itempict[imageindex]%>">
+                                              <button class="go" type="submit">VIEW <i class="fa-solid fa-arrow-right"></i></button>
+                                              </form>
+                                            </div>
+                                        </div>
+                                        <% } %>
+                                        <% k = nextline %>
+                                        <% l++ %>
+                                          <% } %>
+                                        <% } %>
+                                         </div>
+                                        <% }else{ %>
+                                          <% console.log("empty"); %>
+                                        <% } %>
+                                        <% } %>
+                                        <% } %>
+                                        <% console.log(headcheck); %>
+                                        <% } %>
+
+ </div>
+  <script src="https://kit.fontawesome.com/a35fff1297.js" crossorigin="anonymous"></script>
+</body>
+</html>

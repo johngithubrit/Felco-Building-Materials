@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title></title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width,intial-scale = 1.0">
+        <link rel = "stylesheet" href="productdesc.css" type="text/css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+  </head>
+  <body>
+    <div class="backposi">
+          <form class="backforms" action="/backform" method="post">
+          <button class = "butnback" type="submit" name="button">
+            <i class="fa-solid fa-angle-left"></i></button>
+          <span>BACK</span>
+          </form>
+      </div>
+      <div name ="subcheck" class="desc-back">
+          <%= iiteemcate %>
+      </div>
+      <div class="whole-posi" style="width:100%;background-color:green;">
+      <div class="product-stand">
+        <div class="image-size">
+          <img src="<%=itemimage %>" alt="imagessconti">
+        </div>
+      </div>
+      <% var incre=0; %>
+      <% var itlen= 20; %>
+      <% var lend = 0; %>
+      <% if(iiteemcate.includes("PRISMA") || iiteemcate.includes("JOTUN")|| iiteemcate.includes("BRIGHTO") || iiteemcate.includes("BERGER")){ %>
+      <div class="color-list-posi">
+                <div class="color-list">
+                    <form class="color-tube" action="/colorselect" method="post">
+    <% if(iiteem.includes("Primer") || iiteem.includes("SuperFlat") || iiteem.includes("silk") || iiteem.includes("AR")||iiteem.includes("Undercoat")||iiteem.includes("Acrylic")){ %>
+  <% for(let d = 0;d <= itlen;d++){ %>
+<form class="" action="/colorselect" method="post" required style="background-color:blue;width:100%;">
+    <% incre+=17 %>
+    <% itlen = 0; %>
+    <button class="color-btn" type="submit" required name="codebtn" value="<%= itempainame[d]%>" style="background-color:<%= itempai[d] %>;top:<%= incre %>%;border:0.15px solid grey;">
+      <%= itempainame.indexOf(itempainame[d])%>
+    </button>
+<% if(clrcheck == itempainame[d]){ %>
+      <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+    <% }else{ %>
+      <% } %>
+      <% } %>
+<% } else if(iiteem.includes("Value")){ %>
+  <% for(let d = 0;d <= itlen;d++){ %>
+    <% incre+=17 %>
+    <% itlen = 1; %>
+    <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+    <button class="color-btn" type="submit" name="codebtn" value="<%= itempainame[d]%>" style="background-color:<%= itempai[d] %>;top:<%= incre %>%;border:0.15px solid grey;">
+      <%= itempainame.indexOf(itempainame[d])%>
+    </button>
+<% if(clrcheck == itempainame[d]){ %>
+      <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+    <% }else{ %>
+      <% } %>
+      <% } %>
+<% }else if(iiteem.includes("High Gloss Enamel")){ %>
+  <% for(let d = 4;d <= itlen;d++){ %>
+    <% incre+=17; %>
+    <% itlen = 7; %>
+
+    <button class="color-btn" type="submit" name="codebtn" value="<%= itempainame[d]%>" style="background-color:<%= itempai[d] %>;top:<%= incre %>%;border:0.15px solid grey;">
+      <%= itempainame.indexOf(itempainame[d])%>
+    </button>
+<% if(clrcheck == itempainame[d]){ %>
+      <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+    <% }else{ %>
+      <% } %>
+      <% } %>
+<% }else if(iiteem.includes("Interior Emulsion")){ %>
+  <% for(let d = 8;d <= itlen;d++){ %>
+    <% incre+=17 %>
+    <% itlen = 9; %>
+    <button class="color-btn" type="submit" name="codebtn" value="<%= itempainame[d]%>" style="background-color:<%= itempai[d] %>;top:<%= incre %>%;border:0.15px solid grey;">
+      <%= itempainame.indexOf(itempainame[d])%>
+    </button>
+<% if(clrcheck == itempainame[d]){ %>
+      <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+    <% }else{ %>
+      <% } %>
+      <% } %>
+<% }else if(iiteem.includes("Gloss Enamel")){ %>
+  <form class="" action="/colorselect" method="post">
+  <% for(let d = 10;d <= itlen;d++){ %>
+    <% incre+=17 %>
+    <% itlen = 12; %>
+    <button class="color-btn" type="submit" name="codebtn" value="<%= itempainame[d]%>" style="background-color:<%= itempai[d] %>;top:<%= incre %>%;border:0.15px solid grey;">
+      <%= itempainame.indexOf(itempainame[d])%>
+    </button>
+  <% if(clrcheck == itempainame[d]){ %>
+          <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+        <% }else{ %>
+          <% } %>
+          <% } %>
+<% }else if(iiteem.includes("Synthetic")) { %>
+    <% for (let d = 13; d <= itlen; d++) { %>
+      <% incre += 17 %>
+      <% itlen = 22; %>
+      <button class="color-btn" type="submit" name="codebtn" value="<%= itempainame[d]%>" style="background-color:<%= itempai[d] %>;top:<%= incre %>%;border:0.15px solid grey;">
+        <%= itempainame.indexOf(itempainame[d])%>
+      </button>
+<% if(clrcheck == itempainame[d]){ %>
+        <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+      <% }else{ %>
+        <% } %>
+        <% } %>
+<% }else if(iiteem.includes("Plastic Emulsion")){ %>
+  <% for(let d = 3;d <= itlen;d++){ %>
+    <% incre+=17 %>
+    <% itlen = 4; %>
+    <button class="color-btn" type="submit" name="codebtn" value="<%= itempainame[d]%>" style="background-color:<%= itempai[d] %>;top:<%= incre %>%;border:0.15px solid grey;">
+      <%= itempainame.indexOf(itempainame[d])%>
+    </button>
+<% if(clrcheck == itempainame[d]){ %>
+      <input type="hidden" name="innerdescpros" value="<%= itempainame[d]%>">
+    <% }else{ %>
+      <% } %>
+      <% } %>
+<% }else{ %>
+<% console.log("Ss"); %>
+<% } %>
+                              </form>
+              </div>
+            </div>
+            <% }else{ %>
+              <% console.log("notrequired"); %>
+              <% } %>
+      </div>
+      <aside>
+        <div class="descc-item">
+        <% if(iiteemcate.includes("PRISMA") || iiteemcate.includes("JOTUN")|| iiteemcate.includes("BRIGHTO") || iiteemcate.includes("BERGER")){ %>
+          <h1><%= iiteem %></h1>
+          <h4 class="subhead">
+          <%= iiteemcate %>
+          </h4>
+          <% }else{ %>
+            <h1><%= iiteem %></h1>
+            <h4 class="subhead">
+              <%= iiteemcate %>
+            </h4>
+            <% } %>
+          <div class="para-poss">
+            <p><%=itemddessc %></p>
+          </div>
+              <div class="mainbox-layout">
+                <form class="checkk" action="/proddescback" method="post">
+                  <div class="checkbox-possi">
+              <div class="qtyBox">
+                <div class="QTY">
+                  Qty
+                </div>
+                  <input type="number" required name="qtyGet" value="">
+                    <input type="hidden" name="heeadname" value="<%= iiteem %>">
+              </div>
+              <% var i = 0; %>
+              <% lend = 0; %>
+              <% if(iiteemcate.includes("BERGER") || iiteemcate.includes("BRIGHTO") || iiteemcate.includes("PRISMA") || iiteemcate.includes("JOTUN") || iiteem.includes("Bitumen SB") || iiteem.includes("Bitumen Primer") || iiteem.includes("Gar")){ %>
+              <% i=0; lend = 2; %>
+              <% options(); %>
+              <% } else if(iiteem.includes("Tarpal")){ %>
+              <% i=3; lend = 5; %>
+              <% options(); %>
+              <% } else if(iiteem.includes("Waterproof Sheet")){ %>
+              <% i=6; lend = 7; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Gypsum Board")){ %>
+              <% i=8; lend = 10; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("White Wood")){ %>
+              <% i=11; lend = 13; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("MDF Wood")){ %>
+              <% i=14; lend = 15; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Marine Plywood")){ %>
+              <% i=14; lend = 15; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Normal Plywood")){ %>
+                <% i=16; lend = 20; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("PVC Pipe")){ %>
+              <% i=21; lend = 25; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("HP Pipe")){ %>
+              <% i=26; lend = 31; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("PPR Pipe")){ %>
+              <% i=32; lend = 37; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Gully Trap")){ %>
+              <% i=38; lend = 40; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Tubelight ") || iiteem.includes("Tubelight Set")){ %>
+              <% i=41; lend = 42; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("LED Panel Light") || iiteem.includes("LED Cob Light")){ %>
+              <% i=43; lend = 46; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Switch")){ %>
+              <% i=49; lend = 52; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Sockets")){ %>
+              <% i=47; lend = 48; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Flush Box") || iiteem.includes("Surface Box")){ %>
+              <% i=53; lend = 54; %>
+              <% options(); %>
+              <% }else if(iiteem.includes("HP Fittings") ||iiteem.includes("PVC Fittings") || iiteem.includes("PPR Fittings")){ %>
+                <input type = "text" name = "fixededit" value="">
+              <% }else if(iiteem.includes("Wire Connector")){ %>
+              <% i=55; lend = 58; %>
+              <% options(); %>
+              <% }else if(iiteem.includes("Flush Tank")){ %>
+              <% i=79; lend = 80; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Electric Pipe")){ %>
+              <% i=59; lend = 63; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Trunking")){ %>
+              <% i=64; lend = 68; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("2 Core") || iiteem.includes("3 Core")){ %>
+              <% i=69; lend = 72; %>
+              <% options(); %>
+
+              <% }else if(iiteem.includes("Single Core Wire")){ %>
+                <% i=73; lend = 76; %>
+              <% options(); %>
+              <% }else if(iiteem.includes("WC")){ %>
+                <% i=77; lend = 78; %>
+              <% options(); %>
+              <% } else{ %>
+              <% console.log("wrong") %>
+              <% } %>
+
+              <% function options(){ %>
+              <select class="" name="optiget" id="optiget">
+              <% for(i; i<=lend;i++){ %>
+                              <option value="<%=itemdde[i] %>"><%= itemdde[i] %></option>
+              <% } %>
+            </select>
+                            </div>
+                            <input type="hidden" name="subcheck" value="<%=iiteemcate %>">
+              <% } %>
+
+                  <div class="boxx-size">
+
+                            <button class="btn-forrm" type="submit" name="button">Add To List</button>
+
+                            </div>
+                          </form>
+            </div>
+        </div>
+      </aside>
+
+      </div>
+    </div>
+            </div>
+      <script src="https://kit.fontawesome.com/a35fff1297.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<% for (j = 0; j < k; j++) { %>
+    <% if (i < 9) { %>
+      <div class="center-product">
+        <div class="title-head"><%= itemhead[h] %></div>
+        <% h++; %>
+        <div class="title-subhd"><%= itemhead[h] %></div>
+      </div>
+           <div class="productlist-section" style="margin-top: 50px;">
+    <% } %>
+    <% if (i === 9) { %>
+      <% h++; %>
+      <% console.log("value is" + h); %>
+      <div class="center-product">
+        <div class="title-subhd"><%= itemhead[h] %></div>
+      </div>
+        <% lenn = 13; %>
+        <% i++ %>
+        <div class="productlist-section" style="margin-top: 50px;">
+          <% } else if (i === 14) { %>
+          <% h++; %>
+            <div class="center-product">
+              <div class="title-subhd"><%= itemhead[h] %></div>
+            </div>
+        <% lenn = 21; %>
+        <% i++; %>
+        <div class="productlist-section" style="margin-top: 50px;">
+          <% } else if (i === 22) { %>
+            <% h++; %>
+            <div class="center-product">
+            <div class="title-subhd"><%= itemhead[h] %></div>
+            </div>
+       <% lenn = 27; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 28) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 33; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 34) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 43; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 44) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 50; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 51) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 55; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 56) { %>
+       <% lenn = 62; %>
+<div class="center-product">
+ <div class="title-subhd"><%= itemhead[h] %> </div>
+</div>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 63) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 68; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 69) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 75; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 76) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 79; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+<% } else if (i === 80) { %>
+<% h++; %>
+<div class="center-product">
+<div class="title-subhd"><%= itemhead[h] %></div>
+</div>
+       <% lenn = 83; %>
+       <% i++; %>
+       <div class="productlist-section" style="margin-top: 50px;">
+    <% } else if (i === 84) { %>
+      <% h++; %>
+      <div class="center-product">
+      <div class="title-subhd"><%= itemhead[h] %></div>
+      </div>
+             <% lenn = 87; %>
+             <% i++; %>
+             <div class="productlist-section" style="margin-top: 50px;">
+    <% }else{ %>
+      <% console.log("wrong"); %>
+    <% } %>
+
+    <% for (i; i <= lenn; i++) { %>
+        <div class="product-box">
+            <%l++%>
+            <div class="svg-box">
+              <div class="img-card">
+                <img src="<%=itempict[l] %>" style="width: 70%; position: absolute;" alt="">
+              </div>
+              <div  style="font-family: 'Roboto', sans-serif;font-weight:300;letter-spacing: 1px;font-size:14px; position: absolute; bottom: 16%;"><%= itemtext[i] %></div>
+              <form class="" action="/prodesc" method="post">
+                <input  type="hidden" name="innerHtml" value="<%= itemtext[i] %>">
+                <input  type="hidden" name="innercatHtml" value="<%= itemhead[h] %>">
+                <input  type="hidden" name="innerimgdis" value="<%= itempict[l] %>">
+                <input type="hidden" name="innerdescpros" value="<%= itemofdesc[i]%>">
+              <button type="submit">VIEW <i class="fa-solid fa-arrow-right"></i></button>
+              </form>
+            </div>
+        </div>
+
+        <% if (i === 8 && i<=13 || i === 13 && i<=21 || i === 21 && i<=27 || i === 27 && i<=32 || i === 32 && i<=42 || i === 42 && i<=49 || i === 49 && i<=54 || i === 54 && i<=61 || i === 61 && i<=67 || i === 67 && i<=74 || i === 74 && i<=78 || i === 78 && i<=82 || i === 83 && i<=88) { %>
+            <% k++; %>
+        <% } %>
+    <% } %>
