@@ -1,7 +1,7 @@
 *{box-sizing: border-box;scroll-behavior: smooth;
 }
 body{margin:0%;padding:0%;
-  background-color:#FFFFDB;}
+  background-color:#EDFFEE;}
   nav{position: absolute;display:flex;align-items: center;background-color: #707071;top:20px;padding:9px 90px ;border-radius:100px;}
   .nav-bar{position:relative;}
   body::-webkit-scrollbar{
