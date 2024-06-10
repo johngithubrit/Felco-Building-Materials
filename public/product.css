@@ -92,9 +92,7 @@ button:hover{cursor: pointer;}
 @media screen and (max-width:614px){
   .searchform{position:relative;background-color:blue;}
   .product-box{margin-left:10px;}
-  .svg-box{width:200px; height:220px;}
-  .img-card{height:50%;width:80%;}
-  .img-card img{width:20%;}
+  .title-subhd{margin-left:10%;}
 .seartext{width:90vw;}
 .searchbar-posi{display: flex;justify-content: center;position:relative;}
 }
