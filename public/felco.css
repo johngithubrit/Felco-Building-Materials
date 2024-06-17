@@ -1,8 +1,8 @@
 *{box-sizing: border-box;scroll-behavior: smooth;
 }
 body{margin:0%;padding:0%;
-  background-color:#F3FFF3;}
-  nav{position: absolute;display:flex;align-items: center;background-color: #707071;top:20px;padding:9px 90px ;border-radius:100px;}
+  background-color:#EDFFEE;}
+  nav{position: absolute;display:flex;align-items: center;background-color: #F5F5F5;box-shadow:rgb(0,0,0,0.1) 0px 0px 8px;width:1263px;padding:15px 0px;}
   .nav-bar{position:relative;}
   body::-webkit-scrollbar{
     background-color: transparent;
@@ -44,10 +44,11 @@ animation:textmove 3s ease 0s infinite;}
     50%{width:47%;height:80%;}
     100%{width:20%;height:30%;}
   }
-  .ebtn{background-color: none;background-color: transparent;border:none;outline:none;color:white;background-color: none;font-family:'Sofia Sans Extra Condensed', sans-serif;font-size:17px;list-style-type: none;}
+  .ebtn{background-color: none;background-color: transparent;border:none;outline:none;color:#B9B9B9;background-color: none;font-family:"Roboto", sans-serif;margin-left:120px;font-size:12px;font-weight: 600;list-style-type: none;}
   .navtxt:hover{cursor:pointer;}
+  .ebtn:hover{color:black;}
   .homebtn{margin-top:0px;}
-  .logo{width:10px;background-image:url("../image/felcologo.png");background-size:cover;position:absolute;padding:13px;left:5%;}
+  .logo{width:10px;background-image:url("../image/felcologo.png");background-size:22px;background-repeat: no-repeat;background-position: center;position:absolute;padding:15px;left:5%;background-color: #EFEFEF;border-radius:100px;}
   .down-poss{position: absolute;width:100%;display: flex;justify-content: center;}
   .btn-dot{position:absolute;padding:3px;background-color:black;top:10%;border-radius:10px;}
   .section{display: flex;justify-content: center;align-items: center;background-repeat:no-repeat;background-size:1000px;width:100%;
@@ -147,6 +148,10 @@ background-size:cover;background-position:center;}
   .housee{width:400px;}
   .btn-pos{bottom:-20%;}
   .house-posi{position:relative;margin-right:300px;}
+}
+@media screen and (max-width:1256px){
+nav{width:100%;}
+.ebtn{margin-left:100px;}
 }
 @media screen and (max-width:1209px){
   .nut-1{margin-left:500px;}
