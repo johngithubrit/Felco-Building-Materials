@@ -7,6 +7,7 @@ body::-webkit-scrollbar-thumb{
   background-color: #D6FF95;
   border-radius: 10px;
 }
+.newlooks{position:absolute;left:3%;top:20%;font-size:30px;}
 .parent-header{position:relative;display: flex;height:400px;background-image: url("../image/listbackg.png");
 background-size:cover;background-position: center;background-repeat: no-repeat; justify-content: center;width:100%;padding-bottom:120px;}
 a{text-decoration: none;color:black;}
@@ -17,9 +18,9 @@ a:hover{text-shadow:0px 0px 0.2px black;}
     justify-content: center;
     align-items: center;
   }
-  nav{position: absolute;display:flex;align-items: center;background-color: #707071;top:20px;padding:20px 90px ;border-radius:100px;}
+  nav{position: absolute;display:flex;align-items: center;background-color: #F5F5F5;box-shadow:rgb(0,0,0,0.1) 0px 0px 8px;width:1263px;padding:23px 0px;}
   .nav-bar{position:relative;}
-    .logo{width:10px;background-image:url("../image/felcologo.png");background-size:cover;position:absolute;padding:13px;left:4%;}
+  .logo{width:10px;background-image:url("../image/felcologo.png");background-size:22px;background-repeat: no-repeat;background-position: center;position:absolute;padding:15px;left:5%;background-color: #ECEDED;border-radius:100px;}
 a{text-decoration: none;color:white;}
 .ul{font-family:'Sofia Sans Extra Condensed', sans-serif;font-size:17px;list-style-type: none;}
 .translate{margin-left:50px;}
@@ -30,8 +31,9 @@ a:hover{text-shadow:0px 0px 1.2px white;}
     justify-content: center;
     align-items: center;
   }
-  .ibtn{display: block;background-color: none;background-color: transparent;border:none;outline:none;color:white;background-color: none;font-family:'Sofia Sans Extra Condensed', sans-serif;font-size:17px;list-style-type: none;}
-
+  .ibtn{display: block;margin-top:2px;margin-left:120px;background-color: none;background-color: transparent;border:none;outline:none;color:#B9B9B9;background-color: none;font-family:'Roboto', sans-serif;font-size:12px;
+  font-weight:600;list-style-type: none;}
+  .ibtn:hover{cursor:pointer;color:black;}
   .homebtn{margin-top:-10px;}
   .lo{width:100%;}
   .add-circle{margin-top:60px;background-color:orange;left:2%;width:40px;border-radius:100px;position: absolute;padding:20px;display: flex;justify-content: center;align-items: center;}
@@ -39,7 +41,7 @@ a:hover{text-shadow:0px 0px 1.2px white;}
   textarea{resize: none;outline:none;margin-top:10%;width:80%;margin-left:4%;}
   .list-prod-posiparent{width:100%;display: flex;justify-content: center;background-color: blue;}
   .searform{position:absolute;bottom:15%;}
-  #homepagee{position:absolute;left:33%;top:24%;width:18px;}
+  #homepagee{position:absolute;margin-left: 100px;top:24%;width:18px;}
   .circle{position:absolute;top:17.5%;right:2.5%;border-radius:40px;width:40px;display:flex;justify-content: center;padding:20px;
     background-color:lightgrey;display: flex;align-items: center;justify-content: center;}
     .circle-bttn{width:100%;}
@@ -82,17 +84,30 @@ h4{display: flex;justify-content: center;font-family: 'Montserrat', sans-serif;}
 button{outline:none;border:none;color:#6b6b6b;display:flex;align-items: center;justify-content: center;background-color:transparent;height:14px;width:65px;margin-bottom:-20px;font-weight:normal;
   letter-spacing:-0.2px;font-size:11.5px;border-radius:5px;}
 button i{position: absolute;right: 4%;font-weight: lighter;}
+.pro-titles{font-family: 'Roboto', sans-serif;font-weight:700;letter-spacing: 1px;color:#474747;font-size:14px; position: absolute; bottom: 16%;}
 button:hover{cursor: pointer;}
-
+.pro-size{width:70%;position: absolute;}
 @media screen and (max-width:2445px){
 .productlist-section{}
 .list-prod-posiparent{width:100%;display: block;}
 }
-
+@media screen and (max-width:1256px){
+nav{width:100%;}
+.ibtn{margin-left:100px;}
+}
 @media screen and (max-width:614px){
   .searchform{position:relative;background-color:blue;}
+  .parent-header{height:300px;}
+  .newlooks{font-size:22px;}
+  .pro-titles{font-size:12px;}
+  .go{font-size:10px;}
   .product-box{margin-left:10px;}
   .title-subhd{margin-left:10%;}
-.seartext{width:90vw;}
+  .svg-box{width:200px;height:240px;}
+  .pro-size{width:50%;}
+  .searchbar-posi{margin-top:165px;}
+.seartext{width:90vw;padding:10px 30px 10px;box-shadow:rgb(0,0,0,0.2) 0px 0px 4px;border:none;}
+.seartext::placeholder{font-size:10px;position: absolute;top:37%;}
+.circle{padding:15px;width:30px;top:10%;}
 .searchbar-posi{display: flex;justify-content: center;position:relative;}
 }
