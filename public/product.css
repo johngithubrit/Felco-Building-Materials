@@ -97,7 +97,6 @@ nav{width:100%;}
 }
 @media screen and (max-width:614px){
   .searchform{position:relative;background-color:blue;}
-  .parent-header{height:300px;}
   .newlooks{font-size:22px;}
   .pro-titles{font-size:12px;}
   .go{font-size:10px;}
@@ -105,7 +104,8 @@ nav{width:100%;}
   .title-subhd{margin-left:10%;}
   .svg-box{width:200px;height:240px;}
   .pro-size{width:50%;}
-  .searchbar-posi{margin-top:165px;}
+  .searchbar-posi{margin-top:180px;}
+  .center-product{margin-top:80px;}
 .seartext{width:90vw;padding:10px 30px 10px;box-shadow:rgb(0,0,0,0.2) 0px 0px 4px;border:none;}
 .seartext::placeholder{font-size:10px;position: absolute;top:37%;}
 .circle{padding:15px;width:30px;top:10%;}
